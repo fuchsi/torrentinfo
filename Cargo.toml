@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["Daniel Müller <perlfuchsi@gmail.com>"]
 description = "A torrent file parser"
 license = "GPL-3.0-or-later"
+readme = "README.md"
+categories = ["command-line-utilities"]
+repository = "https://github.com/fuchsi/torrentinfo"
+keywords = ["torrent", "bencode"]
 
 [dependencies]
 clap = "2.31.2"

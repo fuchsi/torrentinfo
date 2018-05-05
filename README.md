@@ -1,8 +1,10 @@
-# torrentinfo
+torrentinfo
+===========
 
-A torrent file parse
+A torrent file parser
 
 ## Usage
+
 ```
 USAGE:
     torrentinfo [OPTIONS] <filename>
@@ -12,6 +14,7 @@ OPTIONS:
     -e, --everything    Print everything about the torrent
     -f, --files         Show files within the torrent
     -h, --help          Prints help information
+    -n, --nocolour      No Colours
     -V, --version       Prints version information
 
 ARGS:
@@ -19,8 +22,15 @@ ARGS:
 ```
 
 ## Installation
+
 ```bash
-git clone gitlab@gitlab.fuchsbau:fuchsi/torrentinfo.git
+cargo install torrentinfo
+```
+
+Or from source
+
+```bash
+git clone https://github.com/fuchsi/torrentinfo.git
 cd torrentinfo
 cargo install
 ```
