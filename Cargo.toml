@@ -6,8 +6,15 @@ description = "A torrent file parser"
 license = "GPL-3.0-or-later"
 
 [dependencies]
-clap = "2.31"
-bencode = "0.1.16"
-chrono = "0.4"
-number_prefix = "0.2"
+clap = "2.31.2"
+serde_bencode = "0.2.0"
+chrono = "0.4.2"
+number_prefix = "0.2.8"
 sha-1 = "0.7.0"
+serde = "1.0.45"
+serde_derive = "1.0.45"
+serde_bytes = "0.10.4"
+error-chain = "0.11.0"
+
+[profile.release]
+lto = true
