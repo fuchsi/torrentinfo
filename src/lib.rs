@@ -176,7 +176,11 @@ pub struct File {
 
 impl File {
     pub fn new(length: i64, path: Vec<String>) -> Self {
-        Self{length, path, .. Default::default() }
+        Self {
+            length,
+            path,
+            ..Default::default()
+        }
     }
 
     pub fn length(&self) -> &i64 {

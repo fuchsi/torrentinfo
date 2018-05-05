@@ -15,6 +15,8 @@ serde = "1.0.45"
 serde_derive = "1.0.45"
 serde_bytes = "0.10.4"
 error-chain = "0.11.0"
+yansi = "0.4.0"
+lazy_static = "1.0.0"
 
 [profile.release]
 lto = true
