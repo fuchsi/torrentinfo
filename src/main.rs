@@ -42,7 +42,7 @@ use yansi::{Paint, Style};
 
 use torrentinfo::Torrent;
 
-const VERSION: &'static str = crate_version!();
+const VERSION: &str = crate_version!();
 
 lazy_static! {
     static ref S_NUMBER: Style = Style::cyan();
@@ -132,20 +132,20 @@ fn main() {
             if let Some(ref v) = info.name() {
                 print_line("name", &v, &indent, &col_width);
             }
-            if let &Some(ref v) = &torrent.comment() {
+            if let Some(ref v) = &torrent.comment() {
                 print_line("comment", &v, &indent, &col_width);
             }
-            if let &Some(ref v) = &torrent.announce() {
+            if let Some(ref v) = &torrent.announce() {
                 print_line("announce url", &v, &indent, &col_width);
             }
-            if let &Some(ref v) = &torrent.created_by() {
+            if let Some(ref v) = &torrent.created_by() {
                 print_line("created by", &v, &indent, &col_width);
             }
-            if let &Some(ref v) = &torrent.creation_date() {
+            if let Some(ref v) = &torrent.creation_date() {
                 let date = Utc.timestamp(*v, 0);
                 print_line("created on", &date, &indent, &col_width);
             }
-            if let &Some(ref v) = &torrent.encoding() {
+            if let Some(ref v) = &torrent.encoding() {
                 print_line("encoding", &v, &indent, &col_width);
             }
 
@@ -234,7 +234,6 @@ fn print_everything(buf: &[u8], indent: &str) {
 }
 
 type Dict = HashMap<Vec<u8>, Value>;
-type List = Vec<Value>;
 
 fn print_dict(dict: &Dict, indent: &str, depth: usize) {
     let style = |key| {
@@ -267,7 +266,7 @@ fn print_dict(dict: &Dict, indent: &str, depth: usize) {
     }
 }
 
-fn print_list(list: &List, indent: &str, depth: usize) {
+fn print_list(list: &[Value], indent: &str, depth: usize) {
     let style = |key| {
         if depth % 2 == 0 {
             S_LABEL_ALT.paint(key)

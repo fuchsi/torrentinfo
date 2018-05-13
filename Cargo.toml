@@ -1,6 +1,6 @@
 [package]
 name = "torrentinfo"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Daniel Müller <perlfuchsi@gmail.com>"]
 description = "A torrent file parser"
 license = "GPL-3.0+"
